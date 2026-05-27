@@ -26,12 +26,11 @@
             color: var(--text-main);
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             padding: 40px 20px;
             box-sizing: border-box;
         }
 
-        /* Decorative background elements */
         .glow-circle {
             position: fixed;
             border-radius: 50%;
@@ -71,7 +70,7 @@
 
         .header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .header img {
@@ -99,9 +98,44 @@
             text-transform: uppercase;
         }
 
+        /* Cabecera de sección (Abril / Mayo-Junio) */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+            margin-top: 10px;
+        }
+
+        .section-header:not(:first-of-type) {
+            margin-top: 60px;
+        }
+
+        .section-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            white-space: nowrap;
+        }
+
+        .section-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .section-badge {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.35);
+            white-space: nowrap;
+        }
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
             gap: 25px;
         }
 
@@ -187,14 +221,14 @@
         .card h2 {
             color: var(--text-main);
             margin: 0 0 8px 0;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 700;
             line-height: 1.3;
         }
 
         .card p {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             line-height: 1.6;
             margin: 0;
             font-weight: 400;
@@ -231,21 +265,14 @@
         }
 
         @media (max-width: 768px) {
-            .glass-container {
-                padding: 30px 20px;
-            }
-            .header h1 {
-                font-size: 2.2rem;
-            }
-            .grid {
-                grid-template-columns: 1fr;
-            }
+            .glass-container { padding: 30px 20px; }
+            .header h1 { font-size: 2.2rem; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Fondos dinámicos -->
     <div class="glow-circle glow-1"></div>
     <div class="glow-circle glow-2"></div>
 
@@ -253,16 +280,22 @@
         <div class="header">
             <img src="assets/logo/logo-white.png" alt="Bitrix24 Logo">
             <h1>Newsletters Campaigns</h1>
-            <p>Edición Abril 2026</p>
+            <p>Bitrix24 · Bit24</p>
+        </div>
+
+        <!-- ─── EDICIÓN ABRIL 2026 ─── -->
+        <div class="section-header">
+            <span class="section-title">Edición Abril 2026</span>
+            <span class="section-line"></span>
+            <span class="section-badge">5 emails</span>
         </div>
 
         <div class="grid">
-            
-            <!-- Email 1 -->
+
             <a href="abril-2026/email-1.html" class="card">
                 <div class="card-image">
-                    <!-- Referenciando al hero para hacerlo miniatura visual -->
-                    <img src="assets/email-1/hero-email-1.png" alt="Hero Email 1" onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
+                    <img src="assets/abril-2026/email-1/hero-email-1.png" alt="Hero Email 1"
+                        onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
                 </div>
                 <div class="card-content">
                     <span class="card-tag">PLANTILLA 01</span>
@@ -277,10 +310,10 @@
                 </div>
             </a>
 
-            <!-- Email 2 -->
             <a href="abril-2026/email-2.html" class="card">
                 <div class="card-image">
-                    <img src="assets/email-2/hero-email_2.png" alt="Hero Email 2" onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
+                    <img src="assets/abril-2026/email-2/hero-email_2.png" alt="Hero Email 2"
+                        onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
                 </div>
                 <div class="card-content">
                     <span class="card-tag">PLANTILLA 02</span>
@@ -295,10 +328,10 @@
                 </div>
             </a>
 
-            <!-- Email 3 -->
             <a href="abril-2026/email-3.html" class="card">
                 <div class="card-image">
-                    <img src="assets/email-3/hero_email-3.png" alt="Hero Email 3" onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
+                    <img src="assets/abril-2026/email-3/hero_email-3.png" alt="Hero Email 3"
+                        onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
                 </div>
                 <div class="card-content">
                     <span class="card-tag">PLANTILLA 03</span>
@@ -313,10 +346,10 @@
                 </div>
             </a>
 
-            <!-- Email 4 -->
             <a href="abril-2026/email-4.html" class="card">
                 <div class="card-image">
-                    <img src="assets/email-4/hero_email-4.png" alt="Hero Email 4" onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
+                    <img src="assets/abril-2026/email-4/hero_email-4.png" alt="Hero Email 4"
+                        onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
                 </div>
                 <div class="card-content">
                     <span class="card-tag">PLANTILLA 04</span>
@@ -331,10 +364,10 @@
                 </div>
             </a>
 
-            <!-- Email 5 -->
             <a href="abril-2026/email-5.html" class="card">
                 <div class="card-image">
-                    <img src="assets/email-5/hero_email-5.png" alt="Hero Email 5" onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
+                    <img src="assets/abril-2026/email-5/hero_email-5.png" alt="Hero Email 5"
+                        onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
                 </div>
                 <div class="card-content">
                     <span class="card-tag">PLANTILLA 05</span>
@@ -350,6 +383,72 @@
             </a>
 
         </div>
+
+        <!-- ─── EDICIÓN MAYO — JUNIO 2026 ─── -->
+        <div class="section-header">
+            <span class="section-title">Edición Mayo — Junio 2026</span>
+            <span class="section-line"></span>
+            <span class="section-badge">3 emails</span>
+        </div>
+
+        <div class="grid">
+
+            <a href="mayo-junio-2026/email-1.html" class="card">
+                <div class="card-image">
+                    <img src="assets/mayo-junio-2026/email-1/hero-email-1.png" alt="Hero Email Mayo-Junio 1"
+                        onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">EDICIÓN 01</span>
+                    <h2>WhatsApp como riesgo operativo</h2>
+                    <p>El canal que más usa tu equipo puede ser el mayor punto ciego de la campaña de Renta.</p>
+                    <div class="card-footer">
+                        Ver diseño
+                        <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <a href="mayo-junio-2026/email-2.html" class="card">
+                <div class="card-image">
+                    <img src="assets/mayo-junio-2026/email-2/hero-email-2.png" alt="Hero Email Mayo-Junio 2"
+                        onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">EDICIÓN 02</span>
+                    <h2>Sprint al 30 de junio</h2>
+                    <p>Tres automatizaciones que puedes activar este lunes para cerrar la campaña sin perseguir clientes.</p>
+                    <div class="card-footer">
+                        Ver diseño
+                        <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <a href="mayo-junio-2026/email-3.html" class="card">
+                <div class="card-image">
+                    <img src="assets/mayo-junio-2026/email-3/hero-email-3.png" alt="Hero Email Mayo-Junio 3"
+                        onerror="this.src='https://placehold.co/600x300/1e293b/a0aec0?text=Vista+Previa'">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">EDICIÓN 03</span>
+                    <h2>IA Agentic con Bit24</h2>
+                    <p>El agente que crea leads, mueve etapas y genera informes mientras tú tienes la reunión.</p>
+                    <div class="card-footer">
+                        Ver diseño
+                        <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
     </div>
 </body>
 </html>
